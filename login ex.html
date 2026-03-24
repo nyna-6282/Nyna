@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head><title>Login Page</title></head>
+
+<body>
+	<label for="user">Username : </label>
+	<input type="text" id="user" placeholder="Email-id"><br><br>
+	
+	<label for="pass">Password : </label>
+	<input type="password" id="pass" placeholder="Password"> <br> <br>
+	
+	<input type="submit" value="submit" id="sub" onclick="return check()">
+	
+<script>
+	function check()
+	{
+		let username=document.getElementById("user").value;
+		let password=document.getElementById("pass").value;
+		
+		let pattern=/\w+@\w+\.\w+/;
+		if(pattern.test(username))
+		{
+			alert("Correct");
+			return true;
+		}
+		else
+		{
+			alert("Incorrect");
+			return false;
+		}
+		
+		if(password.length<6||password.length>12)
+		{
+			alert("Password is incorrect !!");
+			return false;
+
+		}
+		
+	}
+</script>
+
+</body>
+
+</html>
+

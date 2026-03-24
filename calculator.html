@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head><title>Calculator</title></head>
+
+<body>
+	<label for="n1">Number 1 : </label>
+	<input type="number" id="n1" placeholder="1st number"><br><br>
+	
+	<label for="n2">Number 2 : </label>
+	<input type="number" id="n2" placeholder="2st number"><br><br>
+	
+	<input type="text" maxlength=1 id="op" placeholder="operation">
+	<input type="button" value="submit" id="btn">
+	
+	<p id="output"></p>
+	
+	
+<script>
+	
+	document.getElementById("btn").addEventListener("click",function(){
+	
+		let x=Number(document.getElementById("n1").value);
+		let y=Number(document.getElementById("n2").value);
+		
+		let z=document.getElementById("op").value;
+		let otp;
+		
+		switch(z)
+		{
+			case "+":
+				otp=x+y;
+				break;
+			case "-":
+				otp=x-y;
+				break;
+			case "*":
+				otp=x*y;
+				break;
+			case "/":
+				otp=x/y;
+				break;
+		}
+		
+		document.getElementById("output").innerHTML="Result = "+ otp;
+		});
+</script>
+
+</body>
+
+</html>
+
